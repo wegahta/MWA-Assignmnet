@@ -1,9 +1,12 @@
-var express= require("express");
-var router= express.Router();
-var controllerStudent =require("../controllers/students.controllers.js");
-var controllerAddress=require("../controllers/address.controller.js");
-router.route("/students").get(controllerStudent.studentsGetAll);
-router.route("/students/:studentId").get(controllerStudent.studentGetOne);
-router.route("/students/:studentId/addresses").get(controllerAddress.addressGetAll);
-router.route("/students/:studentId/addresses/:addressId").get(controllerAddress.addressGetOne);
-module.exports=router;
+var express = require("express");
+var router = express.Router();
+const controllerGames = require("../controllers/games-controller");
+
+router.route("/games").get(controllerGames.gamesGetAll)
+
+router.route("/games/new").post(controllerGames.gamesAddOne);
+
+router.route("/games/:gameId").get(controllerGames.gamesGetOne);
+router.route("/games/:title").get(controllerGames.gameByTitle)
+
+module.exports = router
