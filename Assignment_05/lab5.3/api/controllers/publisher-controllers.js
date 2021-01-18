@@ -27,14 +27,7 @@ games.findById(gameId).select("publisher").exec(function(err,doc){
         res.status(200).json(doc.publisher);
     })
       };
-
-
-
-
-      
-
-
-//  update publisher
+      //  update publisher
 
 var _deletePublisher= function(req, res, game) {
      game.publisher.remove();

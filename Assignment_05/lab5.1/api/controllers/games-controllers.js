@@ -43,10 +43,10 @@ module.exports.gamesGetAll = function (req, res) {
         offset = parseInt(req.query.offset, 10);
     };
 
-    if (req.query &&req.query.lat && req.query.lng) {
-        runGeoQuery(req,res);
-        return;
-    };
+    // if (req.query &&req.query.lat && req.query.lng) {
+    //     runGeoQuery(req,res);
+    //     return;
+    // };
 
     if (req.query && req.query.count) {
         count = parseInt(req.query.count, 10);
