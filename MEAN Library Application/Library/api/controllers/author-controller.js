@@ -98,6 +98,16 @@ var mongoose=require("mongoose");
                   console.log("Geting a book by id for update author")
                   var bookId=req.params.bookId;
                   Book.findById(bookId).select("author").exec(function(err, book){
+                  
+                    if(!book.author){
+                      book.author={
+                        name:"",
+                        sex:"",
+                        numberbook:"",
+                        country:""
+                      };
+                    }
+
                     book.author.name=req.body.author;
                     book.author.sex=req.body.select;
                     book.author.numberbook=req.body.numberbook;
