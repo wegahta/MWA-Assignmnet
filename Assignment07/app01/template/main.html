@@ -1,0 +1,17 @@
+<H1> This is the home page</H1>
+<!-- Hello,{{mainCtrl.jokes}}  -->
+ <ul>
+     <li ng-repeat="joke in mainCtrl.jokes">
+     {{joke.type}}<Br/>
+      {{joke.setup}}<Br>
+        show punchline 
+        <input type="checkbox" ng-model="showPunchline" />
+        <div ng-show="showPunchline">
+            {{joke.punchline}}
+        </div>
+      </li>
+    
+    
+ </ul>
+
+ 
