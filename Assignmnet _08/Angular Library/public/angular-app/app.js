@@ -1,7 +1,8 @@
 angular.module("meanGames", ["ngRoute"]).config(config);
-
+console.log("wegih")
 function config($routeProvider){
-    // $locationProvider.hashPrefix("");
+    console.log("gamecon");
+   
     $routeProvider
     .when("/", {
         templateUrl: "angular-app/game-list/game.html",
