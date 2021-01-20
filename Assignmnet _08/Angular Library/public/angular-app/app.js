@@ -1,17 +1,17 @@
-angular.module("meanGames", ["ngRoute"]).config(config);
+angular.module("Library", ["ngRoute"]).config(config);
 console.log("wegih")
 function config($routeProvider){
-    console.log("gamecon");
+    console.log("Are you even Reached Here");
    
     $routeProvider
     .when("/", {
-        templateUrl: "angular-app/game-list/game.html",
-        controller : "GamesController",
+        templateUrl: "angular-app/book-list/book.html",
+        controller : "BooksController",
         controllerAs: "vm"
     })
-    .when("/game/:id", {
-        templateUrl: "angular-app/game-display/game.html",
-        controller : "GameController",
+    .when("/book/:id", {
+        templateUrl: "angular-app/book-display/book.html",
+        controller : "BookController",
         controllerAs: "vm"
     })
 }

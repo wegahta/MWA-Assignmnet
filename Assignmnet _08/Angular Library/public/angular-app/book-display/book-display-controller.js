@@ -1,17 +1,17 @@
-angular.module("meanGames").controller("GameController", GameController);
+angular.module("Library").controller("BookController", BookController);
 
 function _getStarRating(stars){
     return new Array(stars)
 }
-function GameController($routeParams, GameDataFactory){
+function BookController($routeParams, BookDataFactory){
     var vm = this;
     vm.title = "MEAN Games App";
 
     var id = $routeParams.id;
 
-    GameDataFactory.getOneGame(id)
+    BookDataFactory.getOneBook(id)
         .then(function(response){
-            vm.game = response;
+            vm.book = response;
             vm.rating = _getStarRating(response.rate);
     });
 }
