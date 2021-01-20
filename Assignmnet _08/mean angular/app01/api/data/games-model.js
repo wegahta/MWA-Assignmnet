@@ -14,7 +14,7 @@ var publisherSchema= new mongoose.Schema({
             
             location: {
                 address: String,
-                coordinates: [Number] // Store coordinates in order longitude (E/W), latitude (N/S) 
+                coordinates: [Number] 
             }
     });
 // review schema
