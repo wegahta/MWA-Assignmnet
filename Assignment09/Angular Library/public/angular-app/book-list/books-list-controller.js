@@ -1,5 +1,5 @@
 
-angular.module("Library") .controller("BooksController", BooksController); 
+angular.module("Library").controller("BooksController", BooksController); 
 console.log("bexihe")
 function BooksController(BookDataFactory){
   console.log("ewe")  
@@ -34,6 +34,7 @@ function BooksController(BookDataFactory){
                       });
                     } else {
                       vm.isSubmitted = true;
+
                     }
                 
                   }
