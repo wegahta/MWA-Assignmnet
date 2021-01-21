@@ -1,0 +1,24 @@
+
+<H1>{{vm.title}}</H1>
+<ul>
+    <!-- <li ng-repeat="game in vm.games">
+        {{game.title}}</li> -->
+        
+        <li ng-repeat="book in vm.books">
+            <a ng-href="#!/book/{{book._id}}">{{book.title}}</a>
+        </li>
+    </ul>
+
+    <!-- <form name="vm.bookForm" ng-submit="vm.addBook">
+        To add a new book please fill in all the fields bellow:<Br/>
+        isbn:<input type="text" name="isbn" required ng-model="vm.newBookIsbn" style="color:black"><Br/>
+        title:<input type="text" name="title" required ng-model="vm.newBookTitle"
+        style="color: black"><Br/>
+        subtitle:<input type="text" name="subtitle" required ng-model="vm.newBookSubtitle" style="color: black"><Br/>
+        published:<input type="text" name="published" required ng-model="vm.newBookPublished" style="color:black"><Br/>
+        publisher:<input type="text" name="publisher" required ng-model="vm.newBookPublisher" style="color:black"><Br/>
+        page:<input type="number" name="page" required ng-model="vm.newBookPage" style="color:black"><Br/>
+        description:<input type="text" name="description" required ng-model="vm.newDescription" style="color:black"><Br/>
+        website:<input type="text" name="website" required ng-model="vm.newBooKWebsite" style="color: black"><Br/>
+        <button type="submit" class="btn-success">Add Book</button><BR/>
+       </form> -->

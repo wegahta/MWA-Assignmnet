@@ -11,7 +11,7 @@ function BooksController(BookDataFactory){
             vm.books = response;
         })
         //Adding new book using Angular
-        vm.addBook = function () {
+        vm.addBook = function (){
           console.log(vm.newBookTitle)
               var postData = {
                 isbn: vm.newBookIsbn,

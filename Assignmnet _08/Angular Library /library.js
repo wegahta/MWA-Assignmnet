@@ -14,10 +14,10 @@ var routes =require("./api/routes");
 //require("./api/data/db");
 
 const app = express();
-app.use(express.json());
+//app.use(express.json());
 app.use(bodyParser.urlencoded({extended : false}));
 
-app.set("port", 4000); 
+app.set("port", 3000); 
 
 // interceptor - logging
 //app.use(express.static(path.join(__dirname, "public")));
@@ -26,7 +26,7 @@ app.use(function(req, res, next){
     next();
 })
 app.use("/node_modules",express.static(path.join(__dirname, "node_modules")));
-app.use(bodyParser.json());
+//app.use(bodyParser.json);
 
 // serving static page
 app.use(express.static(path.join(__dirname, "public")));
