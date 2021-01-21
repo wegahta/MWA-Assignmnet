@@ -5,14 +5,15 @@ function BookDataFactory($http){
     return{
         getAllBooks: getAllBooks,
         getOneBook: getOneBook,
-        addOneBook: postBook
+        addOneBook: postBook,
+        deletOneBook: deletOneBook
     };
 
     function getAllBooks(){
         return $http.get("/api/books").then(complete).catch(failed);
     }
     //Adding new book Angular
-    function postBook(){
+    function postBook(book){
         console.log("book is saving");
         return $http.post("/api/books", book).then(complete).catch(failed);
 
@@ -21,6 +22,11 @@ function BookDataFactory($http){
 
     function getOneBook(id){
         return $http.get("/api/books/"+id).then(complete).catch(failed);
+    }
+
+    function deletOneBook(id) {
+        return $http.delete("/api/books/" + id).
+            then(complete).catch(failed);
     }
 
     function complete(response){

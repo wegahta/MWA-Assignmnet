@@ -5,10 +5,14 @@
         {{game.title}}</li> -->
         <li ng-repeat="book in vm.books">
             <a ng-href="#!/book/{{book._id}}">{{book.title}}</a>
+
+            <a ng-href="#!/delete/book/{{book._id}}" class="btn-danger"> Delete Book</a> 
+       
+
         </li>
     </ul>
 
-    <form name="vm.bookForm" ng-submit="vm.addBook">
+    <form name="vm.bookForm" ng-submit="vm.addBook()">
         To add a new book please fill in all the fields bellow:<Br/>
         isbn:<input type="text" name="isbn" required ng-model="vm.newBookIsbn" style="color:black"><Br/>
         title:<input type="text" name="title" required ng-model="vm.newBookTitle"
