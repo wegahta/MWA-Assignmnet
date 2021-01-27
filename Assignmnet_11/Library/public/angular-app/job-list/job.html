@@ -1,0 +1,23 @@
+<H1>{{vm.title}}</H1>
+<ul>
+    <li ng-repeat="job in vm.jobs">
+
+        <a ng-href="#!/job/{{job._id}}">{{job.title}}</a>
+        <a ng-href="#!/delete/job/{{job._id}}" class="btn-danger"> Delete Job</a>
+        <a ng-href="#!/delete/book/{{job._id}}" class="btn-success"> Update Job</a>  
+
+    </li>
+</ul>
+
+<form name="vm.getForm" ng-submit="vm.postData()" >
+    To add a new job please add the following:<Br/>
+    Title:<input type="text"  name="title" required ng-model="vm.newTitle" style="color:black"/><Br/>
+    salary:<input type="text" name="salary" required ng-model="vm.newSalary" style="color:black"/><Br/>
+    description:<input type="text" name="description" required ng-model="vm.newdescription" style="color:black"/><Br/>
+    skill:<input type="text" name="skill" required ng-model="vm.newskill" style="color:black"/><Br/>
+    postData:<input type="text" name="postData" required ng-model="vm.newpostData" style="color:black"/> <Br/>
+    exprince:<input type="text" name="exprince" required ng-model="vm.newexprince" style="color:black"/> <Br/>
+     <button type="submit" class="btn-success"> Add Job</button><Br/>
+
+
+</form>
