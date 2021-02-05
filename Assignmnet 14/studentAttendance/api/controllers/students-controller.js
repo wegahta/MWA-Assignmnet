@@ -29,6 +29,7 @@ const path=require("path");
 
     // method for student login
     module.exports.studntsLogin=function(req,res){
+      console.log("displaying students login");
         dispatchPage("student_login", res);
 
 

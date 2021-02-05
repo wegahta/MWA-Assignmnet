@@ -1,0 +1,59 @@
+
+    <!-- <link rel = "stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="faculty/qrcode-camera" role="tab" aria-controls="contact" aria-selected="false">Enable QR code</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="attendance-tab" data-toggle="tab" href="students/attendance" role="tab" aria-controls="attendance" aria-selected="false">Attendance</a>
+          </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+      </div>
+    <!--  -->
+    
+    <div class="container">
+      <div class="row col-md-6 col-md-offset-2 custyle">
+      <table class="table table-striped custab">
+      <thead>
+      <a href="register" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new Student</a>
+          <tr>
+              <th>ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Student Id</th>
+              <th>Student Entry</th>
+              <th class="text-center">Action</th>
+          </tr>
+       </thead>
+
+    
+              <tr *ngFor="let game of games">
+                  <td>{{game.id}}</td>
+                  <td><a href = "students/getbyid/{{game.id}}">{{game.First_name}}</a></td>
+                  <td>{{game.Last_name}}</td>
+                  <td>110973</td>
+                  <td>Fall</td>
+                  <td class="text-center">
+                      <a class='btn btn-info btn-xs' href="students/update/{{game._id}}"><span class="glyphicon glyphicon-edit"></span> Edit</a> 
+                      <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a>
+                      
+                  </td> 
+  
+              </tr>
+  
+  
+  
+      </table>
+      </div>
+  </div>

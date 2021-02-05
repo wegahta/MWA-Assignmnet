@@ -1,0 +1,61 @@
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+  </div>
+<!--  -->
+
+<div class="container">
+    <div class="row col-md-6 col-md-offset-2 custyle">
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Attendance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-active">
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="table-primary">
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr *ngFor="let game of game">
+            <td>{{game.id}}</td>
+            <td>{{game.First_name}}</td>
+        <td>{{game.Last_name}}</td>
+        <td>present</td>
+          </tr>
+          <tr class="table-success">
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      </table>
+
+<a class='btn btn-info btn-xs' href="students/getall"><span class="glyphicon glyphicon-edit"></span> Students_List</a><br>
+
+    <a class='btn btn-info btn-xs' ><span class="glyphicon glyphicon-submit"></span> Get_Student _Report</a> 
+   </div>
+   
+     
+</div>
